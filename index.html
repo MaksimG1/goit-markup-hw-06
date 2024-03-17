@@ -21,12 +21,19 @@
   </head>
   <body>
     <!-- Header=========================================================================================== -->
-    <header class="header_underline">
+    <header class="header_underline" class="header_p">
       <div class="container nav_flex">
         <nav class="navigation">
-          <a class="logo" href="./index.html">
-            Web<span class="part_logo">Studio</span>
-          </a>
+          <div class="phone_nav">
+            <a class="logo" href="./index.html">
+              Web<span class="part_logo">Studio</span>
+            </a>
+            <button class="button_phone" id="open_phone_modal">
+              <svg width="18" height="16">
+                <use href="./images/icons.svg#uihnmenu"></use>
+              </svg>
+            </button>
+          </div>
           <ul class="nav_pages">
             <li class="nav_pages_item">
               <a class="nav_pages_item_link curentn" href="/index.html"
@@ -66,7 +73,9 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero_title">Effective Solutions for Your Business</h1>
-          <button class="hero_button" type="button">Order Service</button>
+          <button id="open_modal" class="hero_button" type="button">
+            Order Service
+          </button>
         </div>
       </section>
       <!-- Features=========================================================================================== -->
@@ -530,9 +539,77 @@
     </footer>
     <!-- modal=========================================================================================== -->
     <!-- modal=========================================================================================== -->
-    <div class="modal_overlay is_open">
+    <!--  modal_phone----------------------------------------------------------------------->
+    <div class="modal_phone_overlay" id="modal_phone">
+      <button type="button" class="modal_btn_close" id="close_phone_btn">
+        <svg class="modal_close_svg" width="8" height="8">
+          <use href="./images/icons.svg#uihnclose-black-18dp-2-1"></use>
+        </svg>
+      </button>
+      <div class="modal_container">
+        <ul class="modal_phone_menu">
+          <li class="modal_phone_item">
+            <a class="modal_phone_item_link active" href="">Studio</a>
+          </li>
+          <li class="modal_phone_item">
+            <a class="modal_phone_item_link" href="">Portfolio</a>
+          </li>
+          <li class="modal_phone_item">
+            <a class="modal_phone_item_link" href="">Contacts</a>
+          </li>
+        </ul>
+
+        <ul class="modal_phone_addr">
+          <li class="modal_phone_addr_item">
+            <a href="tel:+110001111111" class="modal_phone_addr_link active"
+              >+11 (000) 111-11-11</a
+            >
+          </li>
+          <li class="modal_phone_addr_item">
+            <a href="mailto:info@devstudio.com" class="modal_phone_addr_link"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="team_social_p">
+          <li class="team_social_item">
+            <a
+              href="https://www.instagram.com/goondmb/"
+              class="team_social_item_link"
+              ><svg class="team_social_svg" width="16" height="16">
+                <use href="./images/icons.svg#uihninstagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="team_social_item">
+            <a href="" class="team_social_item_link"
+              ><svg class="team_social_svg" width="16" height="16">
+                <use href="./images/icons.svg#uihntwitter-1"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="team_social_item">
+            <a href="" class="team_social_item_link"
+              ><svg class="team_social_svg" width="16" height="16">
+                <use href="./images/icons.svg#uihnfacebook-1"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="team_social_item">
+            <a href="" class="team_social_item_link"
+              ><svg class="team_social_svg" width="16" height="16">
+                <use href="./images/icons.svg#uihnlinkedin-1"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- modal=========================================================================================== -->
+
+    <div class="modal_overlay" id="mymodal">
       <div class="modal">
-        <button type="button" class="modal_btn">
+        <button type="button" class="modal_btn_close" id="close_btn">
           <svg class="modal_close_svg" width="8" height="8">
             <use href="./images/icons.svg#uihnclose-black-18dp-2-1"></use>
           </svg>
@@ -618,5 +695,6 @@
         </form>
       </div>
     </div>
+    <script defer src="./modal.js"></script>
   </body>
 </html>
