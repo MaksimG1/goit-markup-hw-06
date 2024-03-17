@@ -1353,10 +1353,12 @@ li {
     background-color: var(--navy_blue);
   }
   .footer_flex {
+    flex-direction: row;
     display: flex;
     align-items: baseline;
   }
   .footer_describe {
+    display: block;
     margin-right: 120px;
   }
   .logo_f {
@@ -1388,6 +1390,7 @@ li {
 
   .footer_socials {
     margin-right: 80px;
+    display: block;
   }
   .footer_social_p {
     font-weight: 500;
@@ -1407,6 +1410,9 @@ li {
     gap: 16px;
   }
 
+  .form_container {
+    text-align: start;
+  }
   .social_item_f:last-child {
     margin-right: 0;
   }
@@ -1439,6 +1445,7 @@ li {
   }
   .form_f_form {
     display: flex;
+    flex-direction: row;
     gap: 24px;
   }
   .f_form_input {
