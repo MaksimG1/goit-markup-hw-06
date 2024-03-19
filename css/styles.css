@@ -145,7 +145,8 @@ li {
   color: #2e2f42;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.nav_pages_item_link:hover {
+}
 .curentn {
   position: relative;
   color: var(--ocean);
@@ -658,8 +659,8 @@ li {
 
   transform: scale(0);
   background-color: var(--dairy);
-  width: 408px;
-  min-height: 584px;
+  width: 70%;
+  min-height: 400px;
   overflow-y: auto;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
@@ -924,6 +925,9 @@ li {
   gap: 24px;
 }
 /* adaptive display =================================================================*/
+/* adaptive display =================================================================*/
+/* adaptive display =================================================================*/
+/* adaptive display =================================================================*/
 .container {
   max-width: 320px;
   padding-left: 16px;
@@ -938,13 +942,154 @@ li {
   justify-content: space-between;
 }
 /* tablet======================================================================================================== */
+/* tablet======================================================================================================== */
+/* tablet======================================================================================================== */
+/* tablet======================================================================================================== */
 
 @media screen and (min-width: 768px) {
   .container {
+    margin: 0 auto;
     max-width: 768px;
   }
-}
+  .header_p {
+    width: 100%;
+  }
+  .nav_flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navigation {
+    display: flex;
+    text-decoration: none;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .button_phone {
+    display: none;
+  }
+  .nav_pages {
+    display: flex;
+  }
+  .nav_address_table {
+    flex-direction: column;
+    display: flex;
+  }
 
+  .nav_address_li {
+    margin-right: 0;
+  }
+  .nav_address_li:first-child {
+    margin-bottom: 6px;
+  }
+
+  .nav_address_item {
+    padding: 6px 0; /* typography */
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--slate);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* herooo======================================= */
+  .hero_title {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #fff;
+  }
+
+  /* features_tablet 😎 ======================================================================================*/
+  .feature_table {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .feature_item {
+    text-align: start;
+    width: 50%;
+    margin-bottom: 72px;
+  }
+
+  /* Our Team 🫠======================================================================================*/
+
+  .team_table {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .team_item {
+    width: calc(50%-24px);
+    margin-right: 24px;
+    margin-bottom: 64px;
+    border-radius: 0 0 4px 4px;
+    width: 264px;
+  }
+  .team_item:last-child {
+    margin-bottom: 64px;
+  }
+
+  /* Portfolio 🫣 ======================================================================================*/
+  .portfolio_table {
+    justify-content: center;
+    /* justify-content: space-between; */
+  }
+
+  .porfolio_item {
+    margin-right: 24px;
+    margin-bottom: 72px;
+    width: calc(50% - 24px);
+    background-color: var(--white);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .porfolio_item:nth-child(2n),
+  .porfolio_item:last-child {
+    margin-right: 0;
+  }
+  .porfolio_item:nth-child(n + 5) {
+    margin-bottom: 0;
+  }
+
+  /* footer🤕  ======================================================================================*/
+  .footer_flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer_describe {
+    align-items: start;
+
+    margin-right: 24px;
+    margin-bottom: 72px;
+  }
+
+  .footer_socials {
+    align-items: start;
+
+    margin-bottom: 104px;
+  }
+  .form_container {
+    text-align: start;
+  }
+  .form_f_form {
+    display: flex;
+    flex-direction: row;
+  }
+}
+/* desktop======================================================================================================== */
+/* desktop======================================================================================================== */
+/* desktop======================================================================================================== */
+/* desktop======================================================================================================== */
+/* desktop======================================================================================================== */
 /* desktop======================================================================================================== */
 @media only screen and (min-width: 1158px) {
   .container {
@@ -1073,6 +1218,7 @@ li {
     width: 100%;
     height: 100%;
     text-align: center;
+    background-size: cover;
   }
   .hero_title {
     display: block;
@@ -1114,13 +1260,15 @@ li {
     padding: 120px 0;
   }
   .feature_table {
+    flex-wrap: nowrap;
     flex-direction: row;
     display: flex;
+    column-gap: 24px;
   }
   .feature_item {
     text-align: start;
     margin-right: 24px;
-    width: 25%;
+    width: 24%;
   }
   .feature_item:last-child {
     margin-right: 0;
@@ -1191,7 +1339,10 @@ li {
     margin-right: 0;
     margin-bottom: 72px;
   }
-
+  .porfolio_item:nth-child(2n),
+  .porfolio_item:last-child {
+    margin-right: 24px;
+  }
   .team_item_image {
     display: block;
   }
@@ -1360,6 +1511,7 @@ li {
   .footer_describe {
     display: block;
     margin-right: 120px;
+    margin-bottom: 0;
   }
   .logo_f {
     display: inline-block;
@@ -1391,6 +1543,7 @@ li {
   .footer_socials {
     margin-right: 80px;
     display: block;
+    margin-bottom: 0;
   }
   .footer_social_p {
     font-weight: 500;
@@ -1495,5 +1648,20 @@ li {
   .f_button_form_span_svg {
     margin-left: 16px;
     fill: var(--white);
+  }
+
+  .modal {
+    position: absolute;
+    transform: scale(0);
+    background-color: var(--dairy);
+    width: 408px;
+    min-height: 584px;
+    overflow-y: auto;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+      0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    background: #fcfcfc;
+    border-radius: 4px;
+    padding: 72px 24px 24px 24px;
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
