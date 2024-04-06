@@ -99,7 +99,7 @@ li {
 
 .logo {
   margin-right: 76px;
-  padding: 24px 0 24px 0;
+  padding: 16px 0 16px 0;
   /* typography */
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -209,7 +209,6 @@ li {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
   width: 100%;
   height: 100%;
   text-align: center;
@@ -444,6 +443,7 @@ li {
   display: flex;
   flex-wrap: wrap;
 }
+
 .porfolio_item {
   width: 100%;
   margin-bottom: 48px;
@@ -897,7 +897,7 @@ li {
 /* MODAL PHONE--------------------------------------------------------------------- */
 
 .modal_phone_overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: #fff;
@@ -908,16 +908,15 @@ li {
   padding: 72px 24px 40px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .open_phone_modal {
   pointer-events: fill;
   transform: translateX(0);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal_phone_menu {
-  margin-bottom: 165px;
+  margin-bottom: auto;
 }
 .modal_phone_item {
 }
@@ -991,6 +990,9 @@ li {
   .container {
     margin: 0 auto;
     max-width: 768px;
+  }
+  .logo {
+    padding: 24px 0 24px 0;
   }
   .modal_phone_overlay {
     display: none;
@@ -1099,8 +1101,11 @@ li {
   .feature_item {
     margin-right: 24px;
     text-align: start;
-    width: calc(50% - 24px);
+    width: calc((736px - 1 * 24px) / 2);
     margin-bottom: 72px;
+  }
+  .feature_item:nth-child(2n) {
+    margin-right: 0;
   }
   .feature_item:nth-child(n + 3) {
     margin-bottom: 0;
@@ -1140,7 +1145,7 @@ li {
   .porfolio_item {
     margin-right: 24px;
     margin-bottom: 72px;
-    width: calc(50% - 24px);
+    width: calc((736px - 1 * 24px) / 2);
     background-color: var(--white);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -1312,11 +1317,12 @@ li {
     background-position: center;
     background-size: cover;
     /* max-width: 1440px; */
-    max-width: 100vw;
+    max-width: 1440px;
     height: 100%;
     text-align: center;
     background-size: cover;
     object-fit: cover;
+    margin: 0 auto;
   }
 
   /* 2x ==============================================*/
@@ -1391,8 +1397,9 @@ li {
   }
   .feature_item {
     text-align: start;
-    margin-right: 24px;
-    width: 24%;
+    margin-right: 0;
+    width: 25%;
+    margin-bottom: 0;
   }
 
   .feature_item:last-child {
@@ -1471,7 +1478,7 @@ li {
   .porfolio_item:last-child {
     margin-right: 24px;
   }
-  .team_item:nth-child(2n) {
+  .team_item:nth-child(2) {
     margin-bottom: 0;
     margin-right: 24px;
   }
